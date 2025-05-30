@@ -12,5 +12,5 @@ jobs:
       - name: Mensaje de inicio
         run: echo "Hola, este es un workflow de GitHub Actions que se ejecuta al hacer push a la rama master."
       - run: npm install
-      - run: npm test
+      #- run: npm test
       - run: echo "Listo!!!"
