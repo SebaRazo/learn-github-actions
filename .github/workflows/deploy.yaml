@@ -2,7 +2,7 @@ name: "Buen día, este es un workflow de GitHub Actions. Este workflow se ejecut
 
 on:
   push:
-    branches: ["master"]
+    branches: ["master, sebarazo"]
 
 jobs:
   deploy-sebarazo-ghactions:
