@@ -1,0 +1,16 @@
+name: "Buen dia, este es un workflow de GitHub Actions. Este workflow se ejecutará cada vez que se haga un push a la rama master del repositorio."
+
+on:
+  push: # Vamos a disparar este wflow cuando se haga un push
+    branches: ["master"]
+
+jobs:
+  deploy-sebarazo-ghactions:
+    runs-on: ubuntu-latest # Usamos un runner de Ubuntu
+    steps: # Pasos que se ejecutarán en el job
+      - uses: actions/checkout@v4 # Usamos la acción de checkout para obtener el código del repositorio
+      - name: Checkout repository
+      - run: echo "Hola, este es un workflow de GitHub Actions que se ejecuta al hacer push a la rama master."
+      - run: npm install # Instalamos las dependencias del proyecto
+      - run: npm test # Ejecutamos los tests del proyecto
+      - run: echo "Listo!"
